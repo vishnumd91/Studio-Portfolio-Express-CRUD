@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import { connectDB } from "./config/db.js";
 import { router } from "./routes/index.js";
+import swaggerDocs from "../swagger.js";
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -21,6 +22,8 @@ app.use(
 // CORS Config
 app.options("*", cors());
 app.use(express.json());
+
+swaggerDocs(app, PORT);
 
 // Setting up Routes Middleware
 app.use("/api", router);

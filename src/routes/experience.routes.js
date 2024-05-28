@@ -49,8 +49,10 @@ const router = Router();
 
 /**
  * @swagger
- * /:
+ * /api/experience/:
  *   get:
+ *     tags:
+ *       - Experience Controller
  *     summary: Retrieve a list of experiences
  *     responses:
  *       200:
@@ -62,6 +64,8 @@ const router = Router();
  *               items:
  *                 $ref: '#/components/schemas/Experience'
  *   post:
+ *     tags:
+ *       - Experience Controller
  *     summary: Create a new experience
  *     requestBody:
  *       required: true
@@ -82,8 +86,10 @@ const router = Router();
 
 /**
  * @swagger
- * /{id}:
+ * /api/experience/{id}:
  *   put:
+ *     tags:
+ *       - Experience Controller
  *     summary: Update an experience by ID using PUT
  *     parameters:
  *       - in: path
@@ -110,6 +116,8 @@ const router = Router();
  *       500:
  *         description: Some error happened
  *   patch:
+ *     tags:
+ *       - Experience Controller
  *     summary: Update an experience by ID using PATCH
  *     parameters:
  *       - in: path
@@ -136,6 +144,8 @@ const router = Router();
  *       500:
  *         description: Some error happened
  *   delete:
+ *     tags:
+ *       - Experience Controller
  *     summary: Delete an experience by ID
  *     parameters:
  *       - in: path
